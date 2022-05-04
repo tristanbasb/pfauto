@@ -52,6 +52,7 @@ echo "Veuillez maintenant renseigner l'addresse ip de votre pfsense :"
 read addIp
 #Permet de modifier l'adresse ip de la ligne 14 par l'adresse choisi par l'utilisateur 
 sed -i '14 s/192.168.12.34/'$addIp'/' /save/pfmotion_curl.sh
+echo " "
 
 ####Changer le nom d'utilisateur####
 #Informe l'utilisateur
@@ -60,6 +61,7 @@ echo "Veuillez renseigner le nom de l'utilisateur que vous avez créez pour les 
 read user
 #Permet de modifier le nom d'utilisateur de la ligne 17 
 sed -i '17 s/admin/'$user'/' /save/pfmotion_curl.sh
+echo " "
 
 ####Changer le mot de passe####
 #Informe l'utilisateur
@@ -68,16 +70,14 @@ echo "Veuillez renseigner le mot de passe de l'utilisateur que vous avez créez 
 read mdp
 #Permet de modifier le mot de passe de la ligne 18 
 sed -i '18 s/admin/'$mdp'/' /save/pfmotion_curl.sh
+echo " "
 
 
-
-####Choix du dossier pour les backup de pfsense####
+####Choix du dossier pour les backup de pfsense####ls 
 #Permet d'afficher la liste des fichiers et des dossiers du google drive de l'utilisateur
 /save/gdrive list
 #Informe l'utilisateur
-echo 
-" 
-Veuillez séléctionner l'id du dossier dans lequel vous souhaitez mettre vos backup (l'id est à gauche en face du nom de votre dossier dans la liste ci-dessus):
+echo " Veuillez séléctionner l id du dossier dans lequel vous souhaitez mettre vos backup (l id est à gauche en face du nom de votre dossier dans la liste ci-dessus):
 
 "
 #Permet de récuperer l'information donner par l'utilisateur
