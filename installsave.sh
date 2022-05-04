@@ -45,7 +45,15 @@ echo "Veuillez copier le lien en dessous et le coller dans votre naviguateur. En
 #Permet de récuperer les informations du compte google de l'utilisateur
 ./save/gdrive about
 
+#Informe l'utilisateur
 echo "Veuillez maintenant renseigner l'addresse ip de votre pfsense :"
+
+#Permet de récupere l'information donner par l'utilisateur
+read addIp
+
+sed -i '14s/PFSENSE_HOST=https://192.168.12.34/PFSENSE_HOST=https://'$addIp''
+
+
 
 ####autogdrive####
 #Copie colle autogdrive.sh vers /save/
