@@ -31,3 +31,7 @@ rm -r /save/bm-backup-pfsense
 
 #Installation de curl
 apt install curl -y
+
+#Création d'un dossier conf_backup pour mettre les backup
+mkdir /save/conf_backup
+
