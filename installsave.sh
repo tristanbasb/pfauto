@@ -38,6 +38,8 @@ mkdir /save/conf_backup
 
 
 ####Initialisation####
+#Vide le terminal
+clear
 
 #Informe l'utilisateur
 echo "Veuillez copier le lien en dessous et le coller dans votre naviguateur. Ensuite utilisez votre compte et autoriser l'utilisatation, une fois que c'est fait copier le code d'autorisation"
@@ -54,7 +56,7 @@ echo "Veuillez maintenant renseigner l'addresse ip de votre pfsense :"
 #Permet de récupere l'information donner par l'utilisateur
 read addIp
 
-sed '14s/PFSENSE_HOST=https://192.168.12.34/PFSENSE_HOST=https://'$addIp'' /save/pfmotion_curl.sh
+sed -i '14 s/192.168.12.34/'$addIp'/' /save/pfmotion_curl.sh
 
 
 ####autogdrive####
@@ -64,12 +66,12 @@ cp /opt/autogdrive.sh /save/autogdrive.sh
 
 ####crontab####
 #Supprime le cron existant
-crontab -l > moncron
+crontab -l > moncron >/dev/null 2>&1
 
 #Permet de mettre la ligne suivante dans le cron
-echo "
-0 10 * * * /save/pfmotion_curl.sh
- 0 15 * * * /save/autogdrive.sh
+echo 
+"0 10 * * * /save/pfmotion_curl.sh
+0 15 * * * /save/autogdrive.sh
 " >> moncron
 
 #Installer un nouveau fichier moncron 
