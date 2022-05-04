@@ -37,6 +37,17 @@ mkdir /save/conf_backup
 
 
 
+####Initialisation####
+
+echo "Avant toute chose veuillez vous connecter à votre compte google"
+
+#
+./save/gdrive about
+
+####autogdrive####
+
+
+
 ####crontab####
 #Supprime le cron existant
 crontab -l > moncron
@@ -52,6 +63,3 @@ crontab moncron
 
 #Supprime le fichier moncron
 rm moncron
-
-
-
