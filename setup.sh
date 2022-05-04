@@ -100,8 +100,8 @@ cp /opt/test/autogdrive.sh /save/autogdrive.sh
 crontab -l > moncron
 #Permet de mettre la ligne suivante dans le cron
 echo "
-0 10 * * * /save/pfmotion_curl.sh
-0 15 * * * /save/autogdrive.sh
+0 10 * * * bash /save/pfmotion_curl.sh
+0 15 * * * bash /save/autogdrive.sh
 " >> moncron >/dev/null 2>&1
 #Installer un nouveau fichier moncron 
 crontab moncron
