@@ -69,7 +69,7 @@ echo "Veuillez renseigner le mot de passe de l'utilisateur que vous avez créez 
 #Permet de récupere l'information donner par l'utilisateur
 read mdp
 #Permet de modifier le mot de passe de la ligne 18 
-sed -i '18 s/admin/'$mdp'/' /save/pfmotion_curl.sh
+sed -i '18 s/VotreMdp/'$mdp'/' /save/pfmotion_curl.sh
 echo " "
 
 
