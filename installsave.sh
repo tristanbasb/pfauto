@@ -38,21 +38,14 @@ mkdir /save/conf_backup
 
 
 ####Initialisation####
+
 #Informe l'utilisateur
-echo "Avant toute chose veuillez vous connecter à votre compte google. Une fois que c'est fait taper 'oui' :"
+echo "Veuillez copier le lien en dessous et le coller dans votre naviguateur. Ensuite utilisez votre compte et autoriser l'utilisatation, une fois que c'est fait copier le code d'autorisation"
 
-#Permet de récuperer la réponse de l'utilisateur
-read reponse
+#Permet de récuperer les informations du compte google de l'utilisateur
+./save/gdrive about
 
-if [ $reponse == 'oui']
-then
-    
-    #Permet de récuperer les informations du compte google de l'utilisateur
-    ./save/gdrive about
-
-fi
-
-
+echo "Veuillez maintenant renseigner l'addresse ip de votre pfsense :"
 
 ####autogdrive####
 #Copie colle autogdrive.sh vers /save/
