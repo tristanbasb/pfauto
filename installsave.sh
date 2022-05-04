@@ -41,9 +41,12 @@ mkdir /save/conf_backup
 
 #Informe l'utilisateur
 echo "Veuillez copier le lien en dessous et le coller dans votre naviguateur. Ensuite utilisez votre compte et autoriser l'utilisatation, une fois que c'est fait copier le code d'autorisation"
+echo " "
 
 #Permet de récuperer les informations du compte google de l'utilisateur
-./save/gdrive about
+/save/gdrive about
+
+echo " "
 
 #Informe l'utilisateur
 echo "Veuillez maintenant renseigner l'addresse ip de votre pfsense :"
@@ -51,13 +54,12 @@ echo "Veuillez maintenant renseigner l'addresse ip de votre pfsense :"
 #Permet de récupere l'information donner par l'utilisateur
 read addIp
 
-sed -i '14s/PFSENSE_HOST=https://192.168.12.34/PFSENSE_HOST=https://'$addIp''
-
+sed '14s/PFSENSE_HOST=https://192.168.12.34/PFSENSE_HOST=https://'$addIp'' /save/pfmotion_curl.sh
 
 
 ####autogdrive####
 #Copie colle autogdrive.sh vers /save/
-cp ./test/autogdrive.sh /save/autogdrive.sh
+cp /opt/autogdrive.sh /save/autogdrive.sh
 
 
 ####crontab####
@@ -65,8 +67,8 @@ cp ./test/autogdrive.sh /save/autogdrive.sh
 crontab -l > moncron
 
 #Permet de mettre la ligne suivante dans le cron
-echo 
-"0 10 * * * /save/pfmotion_curl.sh
+echo "
+0 10 * * * /save/pfmotion_curl.sh
  0 15 * * * /save/autogdrive.sh
 " >> moncron
 
