@@ -38,14 +38,25 @@ mkdir /save/conf_backup
 
 
 ####Initialisation####
+#Informe l'utilisateur
+echo "Avant toute chose veuillez vous connecter à votre compte google. Une fois que c'est fait taper 'oui' :"
 
-echo "Avant toute chose veuillez vous connecter à votre compte google"
+#Permet de récuperer la réponse de l'utilisateur
+read reponse
 
-#
-./save/gdrive about
+if [ $reponse == 'oui']
+then
+    
+    #Permet de récuperer les informations du compte google de l'utilisateur
+    ./save/gdrive about
+
+fi
+
+
 
 ####autogdrive####
-
+#Copie colle autogdrive.sh vers /save/
+cp ./test/autogdrive.sh /save/autogdrive.sh
 
 
 ####crontab####
