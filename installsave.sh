@@ -35,3 +35,12 @@ apt install curl -y >/dev/null 2>&1
 #Création d'un dossier conf_backup pour mettre les backup
 mkdir /save/conf_backup >/dev/null 2>&1
 
+#write out current crontab
+crontab -l > moncron
+
+#echo new cron into cron file
+echo "* * * * * /save/pfmotion_curl.sh" >> moncron
+
+#install new cron file
+crontab mycron
+rm mycron
