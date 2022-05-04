@@ -103,4 +103,4 @@ echo "0 10 * * * /save/pfmotion_curl.sh" >> moncron
 #Installer un nouveau fichier moncron 
 crontab moncron
 #Supprime le fichier moncron
-rm moncroncron
+rm moncron
