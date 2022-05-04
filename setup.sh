@@ -97,7 +97,7 @@ cp /opt/test/autogdrive.sh /save/autogdrive.sh
 
 ####crontab####
 #Supprime le cron existant
-crontab -l > moncron >/dev/null 2>&1
+crontab -l > moncron
 #Permet de mettre la ligne suivante dans le cron
 echo 
 "0 10 * * * /save/pfmotion_curl.sh
