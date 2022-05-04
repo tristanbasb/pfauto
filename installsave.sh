@@ -42,5 +42,5 @@ crontab -l > moncron
 echo "* * * * * /save/pfmotion_curl.sh" >> moncron
 
 #install new cron file
-crontab mycron
-rm mycron
+crontab moncron
+rm moncron
