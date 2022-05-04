@@ -43,6 +43,8 @@ echo " "
 
 
 
+####Modification du fichier pfmotion_curl.sh####
+
 ####Changer adresse ip#####
 #Informe l'utilisateur
 echo "Veuillez maintenant renseigner l'addresse ip de votre pfsense :"
@@ -66,6 +68,12 @@ echo "Veuillez renseigner le mot de passe de l'utilisateur que vous avez créez 
 read mdp
 #Permet de modifier le mot de passe de la ligne 18 
 sed -i '18 s/admin/'$mdp'/' /save/pfmotion_curl.sh
+
+
+
+####Choix du dossier pour les backup de pfsense####
+#Permet d'afficher la liste des fichiers et des dossiers du google drive de l'utilisateur
+/save/gdrive list
 
 
 
