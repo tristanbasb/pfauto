@@ -74,13 +74,17 @@ sed -i '18 s/admin/'$mdp'/' /save/pfmotion_curl.sh
 ####Choix du dossier pour les backup de pfsense####
 #Permet d'afficher la liste des fichiers et des dossiers du google drive de l'utilisateur
 /save/gdrive list
+#Informe l'utilisateur
 echo 
 " 
 Veuillez séléctionner l'id du dossier dans lequel vous souhaitez mettre vos backup (l'id est à gauche en face du nom de votre dossier dans la liste ci-dessus):
 
 "
+#Permet de récuperer l'information donner par l'utilisateur
 read id
+#Création d'un fichier iddossier
 touch /save/iddossier
+#Permet de mettre la varible dans le fichier iddossier
 echo $id >> /save/iddossier
 
 
