@@ -73,8 +73,8 @@ sed -i '18 s/VotreMdp/'$mdp'/' /save/pfmotion_curl.sh
 echo " "
 
 ####Changer le nom de sauvegarde####
-sed -i '40 s/+%Y%m%d%H%M%S/+%Y-%m-%d-%H' /save/pfmotion_curl.sh
-
+sed -i '40 s/+%Y%m%d%H%M%S/+%Y-%m-%d-%H/' /save/pfmotion_curl.sh
+sed -i '84 s/${hostname}_${domain}-//' /save/pfmotion_curl.sh
 
 
 ####Choix du dossier pour les backup de pfsense####ls 
