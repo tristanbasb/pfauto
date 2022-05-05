@@ -102,7 +102,7 @@ crontab -l > moncron
 echo "
 0 10 * * * bash /save/pfmotion_curl.sh
 0 15 * * * bash /save/autogdrive.sh
-" >> moncron >/dev/null 2>&1
+" >> moncron 
 #Installer un nouveau fichier moncron 
 crontab moncron
 #Supprime le fichier moncron
