@@ -73,7 +73,9 @@ sed -i '18 s/VotreMdp/'$mdp'/' /save/pfmotion_curl.sh
 echo " "
 
 ####Changer le nom de sauvegarde####
+#Permet de modifier la ligne 40 
 sed -i '40 s/+%Y%m%d%H%M%S/+%Y-%m-%d-%H/' /save/pfmotion_curl.sh
+#Permet de modifier la ligne 84
 sed -i '84 s/${hostname}_${domain}-//' /save/pfmotion_curl.sh
 
 
