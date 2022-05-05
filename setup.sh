@@ -96,7 +96,7 @@ echo $id >> /save/iddossier
 
 ####autogdrive####
 #Copie colle autogdrive.sh vers /save/
-cp /opt/test/autogdrive.sh /save/autogdrive.sh
+cp /opt/pfauto/autogdrive.sh /save/autogdrive.sh
 
 
 
