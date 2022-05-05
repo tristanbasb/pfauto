@@ -77,7 +77,8 @@ sed -i '40 s/+%Y%m%d%H%M%S/+%Y-%m-%d-%H/' /save/pfmotion_curl.sh
 sed -i '84 s/${hostname}_${domain}-//' /save/pfmotion_curl.sh
 
 
-####Choix du dossier pour les backup de pfsense####ls 
+
+####Choix du dossier pour les backup de pfsense####
 #Permet d'afficher la liste des fichiers et des dossiers du google drive de l'utilisateur
 /save/gdrive list
 #Informe l'utilisateur
