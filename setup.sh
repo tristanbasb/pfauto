@@ -3,9 +3,6 @@
 #Création d'un dossier save
 mkdir /save
 
-cd /save
-
-
 
 ####gdrive####
 #Installation de gdrive qui permet d'upload et de télécharger de linux vers google drive
